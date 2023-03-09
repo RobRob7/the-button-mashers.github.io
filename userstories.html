@@ -4,5 +4,31 @@
 <h1>User Stories</h1>
 
 <p><a href="https://robrob7.github.io/the-button-mashers.github.io/index.html">Visit Home</a></p>
+
+<h2>1.0 Engaging Player Movement Skills</h2>
+
+    <p>&nbsp;</p>
+    <p>As an avid video game enjoyer, I, Arnold Palmer, want to be able to control a character with a unique set of movement skills that allows for engaing gameplay.</p>
+    <p>&nbsp;</p>
+    <p>Elaboration: The user should be able to control a 2D character and perform several movement abilities. These include walking, sprinting, jumping and dashing.</p>
+    <p>&nbsp;</p>
+    <p>Constraints: The user should have a dashing ability which must take into account the various object collisions. The dash must not be able to phase through objects.</p>
+    <p>&nbsp;</p>
+    <p>Effort Estimation: 6 person-hours</p>
+    <p>&nbsp;</p>
+    <p>Acceptance Test: Check collision with several game objects (platforms, walls, enemies), and make sure the player character responds accordingly, i.e., does not phase through objects; the objects must stop the character in its place right before object position.</p>
+
+<h2>2.0 Higher Engagement with Enemy Mobs</h2>
+
+    <p>As a beta-tester, I, Tom Sanchez, want the game to implement a mechanic for hostile entities to react accordingly to the player's presence in order to accomplish a higher level of user engagement, dynamic gameplay, and overall more fun interactions playing the game.</p>
+    <p>&nbsp;</p>
+    <p>Elaboration: Enemy entities should have the ability to act accordingly when a player enters a certain range of detection. Once a player has been detected by an enemy, the enemy should attempt to attack the player in a more directed motion.</p>
+    <p>&nbsp;</p>
+    <p>Constraints: The enemy mobs in the game should not be able to detect the player in unrealistic scenarios, such as if the player is behind it or on a different floor. Enemies should not follow a player off of platforms or when the player has changed floors. Enemies should lose the player when this happens and not follow until detection occurs once again.</p>
+    <p>&nbsp;</p>
+    <p>Effort Estimation: 4 person-hours</p>
+    <p>&nbsp;</p>
+    <p>Acceptance test: Perform a test on the detection capabilities of the enemy entities by moving the player closely behind it and waiting for it to turn around and detect the them. Perform another test in which the player is placed in a different floor from the enemy, and then proceeds to detect the player when the player jumps onto the floor descends onto it. Once detection has occurred, the enemy entity should follow the player, attempting to attack it. Lastly verify that the enemy will not follow once it has lost track of the player.</p>
+
 </body>
 </html>
