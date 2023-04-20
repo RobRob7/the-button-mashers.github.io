@@ -4,5 +4,60 @@
 <h1>Design</h1>
 
 <p><a href="https://robrob7.github.io/the-button-mashers.github.io/index.html">Visit Home</a></p>
+<p><br /><br /></p>
+
+<h2>Our Architecture</h2>
+    <img src="Architecural_Diagram.png" alt="Architecture Diagram">
+
+<h3>Menus</h3>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Main Menu</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Start button: Launches game into first level scene</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Options button: Opens up a new scene containing audio and graphics settings buttons</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Quit game button: Throws an exit command and quits back to OS</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Pause menu</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Resume button: Resumes game and unpauses it</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Quit button: Exits game to main menu scene</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Player Dead Menu</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Restart button: Reloads the current level from beginning</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Return button: Returns to main menu scene</span></p>
+<p><br /><br /></p>
+
+<h3>Player</h3>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Movement:&nbsp;</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-check for walking left or right</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-check for sprinting</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-check for dash</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-check for direction of player</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-check for respawn of player</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Cooldowns: for dash</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Status checks:</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-health of player</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-can double jump</span></p>
+<p>&nbsp;</p>
+
+<h3>Enemies</h3>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Ranged Type:</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Aimless shooting: Enemy entities that stay in a fixed position and are constantly launching hitboxes that hurt the player</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Shooting at player: Enemy entities that only shoot when the player is in detection range. Projectile hitboxes are launched directly at the player until the player leaves detection range</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Melee Type:</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Aimless wandering: Enemy entities that move from left to right and cause damage when in contact with the player</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Follows player: Enemy entities that move from left to right and cause damage when in contact with the player. If the player is in detection range, it will follow it until the player leaves detection range</span></p>
+<p>&nbsp;</p>
+
+<h3>Traps</h3>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;-Pressure plate switches</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;-Spawn enemies: Buttons on the ground that, when stepped on by the player, will spawn hostile entities</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;-Shoot projectiles: Buttons on the ground that, when stepped on by the player, will launch hitboxes that will hurt the player</span></p>
+<p><span style="font-weight: 400;">&nbsp;-Spike trap: Immediately kills player when they collide</span></p>
+<p><span style="font-weight: 400;">&nbsp;-Water trap: Immediately kills player when they collide</span></p>
+<p><br /><br /></p>
+
+
+<h3>Puzzles</h3>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;-Pressure plate switches</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Open doors: Buttons on the ground that, when stepped on by the player, will open up doors to access other areas</span></p>
+
+
 </body>
 </html>
