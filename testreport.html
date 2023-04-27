@@ -4,5 +4,73 @@
 <h1>Test Report</h1>
 
 <p><a href="https://robrob7.github.io/the-button-mashers.github.io/index.html">Visit Home</a></p>
+
+<h3>Component Testing</h3>
+<p><strong>Since we were working with GitHub in the process of developing this game, we had several test branches in which we would test individual components of the program. These test branches would be used to develop certain parts of the game and, when tested thoroughly, would be merged into the main system program. The tests chosen are all good choices as they intertwine with various other objects we need to test. This behavior allows us to test more efficiently by knocking out testing for two objects in one single test. Since time is very valuable, this process allows us to create more for the game with important tests still in play. These tests covered the enemy and player actions, and the user interface of our game:</strong></p>
+<p></p>
+<p>-Functional Enemy Movement:</p>
+<p>The enemies in this game have mostly two types of movement: constant or player adaptive. Enemies who move in a constant fashion will only have a certain pattern of movement that will not change. Enemies who move in a player-adaptive fashion will change their constant pattern as soon as they have detected the player.</p>
+<p>&nbsp;</p>
+<p>-Proper Enemy-Player Interaction:</p>
+<p>The enemies in this game will have different interactions with the player depending on the enemy type, but their main goal will be to try and cause the player to lose their health points. Therefore, the main function for enemies will be to have some sort of hitbox that will cause the player to lose health. As discussed earlier, some enemy types will also react to the player when detected.</p>
+<p>&nbsp;</p>
+<p>-Correct Enemy-Environment Interaction:</p>
+<p>The enemies in this game will mostly stay in the same location unless moved by payer interaction. Because of this, we only need to make sure that the enemies interact correctly when encountering a wall or a fall.</p>
+<p>&nbsp;</p>
+<p>-Player Movement:</p>
+<p>The player controls a character that can walk, run, jump, and dash. A simple test level was created with some platforms and a floor that handle collision with the player. The walking controls were tested for fluid-like behavior. The player shouldn't be able to walk at an abnormally fast pace; a variable for speed helped define the quickness to the players walking speed. The run controls expanded on the walking. The player should be able to only sprint when on the floor. A sprint speed variable is used to control how fast the player is when sprinting. The jump controls should enable the player to jump once when on the floor, and once more when off the floor to enable double jumping behavior. This jumping style has a cooldown that resets whenever player sets foot on the floor. The dashing ability is another move set that the player can utilize after walking in either direction. The dash can be used on and off the floor and has a 3 second cooldown until it can be used again.</p>
+<p>&nbsp;</p>
+<p>-Functional User Interface:</p>
+<p>This game has a basic menu system that allows the player to navigate from level to level via the main menu, change audio, graphics, and control settings, exit the game, and stop all processes associated with running the game from the main menu. There is also an in-game pause menu that allows the player to pause the game, exit back to the main menu, and change certain audio, graphics, and control settings from within the in-game pause menu. Additionally, the user can either restart the game or go back to the main menu after the player dies.</p>
+<p>&nbsp;</p>
+<p>-Implementing Gameplay User Interface:</p>
+<p>As part of the enemy-player and environment-player interactions, there is a UI for the player to glance at that tracks a players current health situation. Whenever a player takes damage, they should lose one health. This health variable is directly tied to the UI displaying the player health. To test, the player should collide with everything that can deal damage to the player and ensure every time the player is damaged the health variable is decreased by one. The UI for this should be displayed and changing at the same time.</p>
+
+<p>&nbsp;</p>
+
+<h3>System Testing</h3>
+<p><strong>Once all changes from each test branch (enemies, player, UI) were merged into the main system program, we needed to make sure that now all the test objectives that were achieved in the individual components also worked in the main program. The test setting is a complete level, where the level is comprised of various objects that were tested independently. When these objects are tested together in a single setting, it allows us to verify all parts of the game are working properly together. This makes the testing more efficient as we are directly testing all components of the game together. To do this, we would make specific test scenarios for each objective in the main system itself to make sure all objectives were achieved at the same time when running the game:</strong></p>
+<p>-Functional Enemy Movement:</p>
+<p>To verify enemy movement worked properly, we designed portions of the game where the player would encounter these enemies with different movement types. Therefore, the main system program included constant close-range and ranged enemies as well as player-adaptive close-range and ranged enemies. The test would be performed by just playing the game and having the player approach these different enemy types.</p>
+<p>&nbsp;</p>
+<p>-Proper Enemy-Player Interaction:</p>
+<p>To verify enemies had proper interaction with the player, we also made tests in which the player would need to purposefully try and lose health from an enemy.</p>
+<p>&nbsp;</p>
+<p>-Correct Enemy-Environment Interaction:</p>
+<p>Finally, to test the correct interaction between the enemies and the environment we made several scenarios in which an enemy would spawn close to a fall or a wall.</p>
+<p>&nbsp;</p>
+<p>-Player Movement:</p>
+<p>To verify the player can utilize all movement abilities, a player character is dropped into a level where each ability can be tested and interact with other objects.</p>
+<p>&nbsp;</p>
+<p>-Functional User Interface:</p>
+<p>Verify that all buttons work and allows the player to change levels in the main menu, exit the game, change different settings, and navigate through the different parts of the game with ease.</p>
+<p>&nbsp;</p>
+<p>-Implementing Gameplay User Interface:</p>
+<p>To verify the UI for the player health system is working, the player is dropped into a test level with all the objects that can deal damage to the player. Once taken damage, the UI for the health must properly update.</p>
+
+<p>&nbsp;</p>
+
+<h3>Acceptance Testing</h3>
+<p><strong>After making sure that all components were merged into the main system program and creating our test objectives, we made several conditions that would indicate our game was behaving correctly:</strong></p>
+<p>-Functional Enemy Movement (implemented):</p>
+<p>We would know for sure that the enemy movement was working properly when we observed that the enemies who are supposed to keep constant movement would not be affected by the player moving close to them. We performed a very similar test with the player's adaptive movement, but instead of the enemy not being affected by the player, we would need to see that the enemy would either follow the player when detecting them or would begin targeting its attacks at the player (ranged enemies).</p>
+<p>&nbsp;</p>
+<p>-Proper Enemy-Player Interaction (implemented):</p>
+<p>We would know for sure that the enemy-player interaction was working properly once we made the player get close enough to the enemies to lose health. Once that has been proven true for all enemy types, we needed also to make sure that all the enemies had the capability of making the player go into a game over screen.</p>
+<p>&nbsp;</p>
+<p>-Correct Enemy-Environment Interaction (partially implemented):</p>
+<p>We would know for sure that the enemy-environment interaction was working properly once we observed that the enemies would properly react to their surroundings This means that, when an enemy encounters a pitfall, it would recognize the fall and turn the other way until it reencounters no more ground. This test was performed the same way for wall interactions, but instead of turning around when encountering no more ground, it would turn around when encountering a collision with a non-player object.</p>
+<p>&nbsp;</p>
+<p>-Engaging Player Movement Skills (partially implemented):</p>
+<p>The player movement was verified to be working properly after repeatedly playtesting a level with various objects. Once all movement abilities had been used in every part of the level without breaking the game or causing the player to phase out of the level, this test was validated to be working as intended.</p>
+<p>&nbsp;</p>
+<p>-Intuitive User-Interface (partially implemented):</p>
+<p>We know that the user interface is functional once all the buttons and options work with their intended use. We will have to have a third party run through the game and test all the different functionality of the menu systems within the game. When a player who had no part in designing the game can successfully and intuitively use and navigate the game, we will consider that as a successful and functional user interface.</p>
+<p>&nbsp;</p>
+<p>-Implementing Gameplay User Interface (partially implemented):</p>
+<p>All team members are to test the game. Whenever they collide with an object that deals damage and the UI for the health is updated properly, this test counts as a pass.</p>
+
+<p>&nbsp;</p>
+
 </body>
 </html>
